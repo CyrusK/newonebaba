@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Shittybaba</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800' >
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-</head>
+    <head>
+        <title>Shittybaba</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800' >
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+
+    <body>
+        <header id="content-header">
+            <div id="content" class="container">
+                <div id="price-container">
+                      <span class="glyphicon glyphicon-bg"></span><span class="price">$4.95</span>
+                </div>
+
+                <%= image_tag('header-image.jpg', id: 'content-header-img', alt: 'Sh*ttybaba - Buy Anything Under $20 today!') %>
+
+                <%= yield %>
+        </header>
 
 
-<body>
-
-<%= yield %>
-
-</body>
+    </body>
 </html>
